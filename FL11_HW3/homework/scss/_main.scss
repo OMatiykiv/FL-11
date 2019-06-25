@@ -1,0 +1,252 @@
+@mixin btn {
+    width: 9vw;
+    height: 6vh;
+    background-color: $buttonBgColor;
+    border: 1vw solid $buttonBgColor;
+    border-radius: 5%;
+    display: block;
+    position: absolute;
+    color: white;
+    &:hover {
+        background-color: lighten($buttonBgColor, 5%);
+        border: 1vw solid lighten($buttonBgColor, 5%);
+    }
+    &:active {
+        background-color: lighten($buttonBgColor, 10%);
+        border: 1vw solid lighten($buttonBgColor, 10%);
+        transform: translateX(1px);
+        transform: translateY(2px);
+    }
+}
+
+@mixin underLine {
+    content: "";
+    z-index: -1;
+    display:block;
+    position: absolute;
+    background-color: $underlineColor;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $mainBgColor;
+    color: $textColor;
+    font-family: map-get($fontSettings, "mainFont");
+}
+
+header {
+    background-image: $headerBgImage;
+    border-radius: 0% 0% 40% 0%;
+    height: 100vmin;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .header-wrap{
+        padding: 3vh 10vw;
+        .landing-logo {
+            font-family: map-get($fontSettings, "textFont");
+            p {
+                display:inline-block;
+                margin-left: 1vw;
+                font-size: 30px;
+                font-weight: 600;
+                text-align: center;
+                span{
+                    display: block;
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+        } 
+        .header_heading {
+            display:inline-block;
+            max-width: 500px;
+            margin-top: 9vh;
+            font-size: 70px;
+            font-weight: 800;
+            line-height: 0.9;
+            position: relative;
+            z-index: 2;
+            &::after {
+                @include underLine;
+                height: 25px;
+                width: 293px;
+                top: 100px;
+            }
+        }
+        .header_text {
+            margin-top: 8vh;
+            font-size: 17px;
+            line-height: 1.35;
+            font-weight: 500;
+            white-space: pre-line;
+            padding: 0;
+            font-family: map-get($fontSettings, "textFont");
+        }
+        .header_button {
+            margin-top: 9vh;
+           @include btn;
+        }
+    }
+}
+
+main {
+    padding: 0 10vw;
+    .section_text {
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 40px;
+        font-weight: 700;
+        position: relative;
+        &::after {
+            @include underLine;
+            height: 15px;
+            width: 195px;
+            top: 30px;
+            left: 40vw;
+        }
+    }
+    .section_card_wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: stretch;
+        grid-gap: 10px;
+        margin-top: 5vh;
+        .section_card {
+            padding: 10px;
+            margin: 0 5px;
+            text-align: center;
+            color: $blockTextColor;
+            background-color: $blockBgColor;
+            border-radius: 2%;
+            z-index: -2;
+            .section_card_img {
+                width: 98%;
+                margin: 1%;
+                border-radius: 2%;
+            }
+            .section_card_heading {
+                color: white;
+                font-size: 25px;
+                position: relative;
+            }
+            &:first-child span {
+                @include underLine;
+                height: 12px;
+                width: 52%;
+                top: 18px;
+                left: 25%;
+            }
+            &:nth-child(2n) span {
+                @include underLine;
+                height: 12px;
+                width: 45%;
+                top: 18px;
+                left: 28%;
+            }
+            &:last-child span {
+                @include underLine;
+                height: 12px;
+                width: 34%;
+                top: 18px;
+                left: 34%;
+            }
+            .section_card_text {
+                margin: 2vmin;
+                vertical-align: center;
+                font-family: map-get($fontSettings, "textFont");
+            }
+        }
+    }
+    .section_banner {
+        margin-top: 14vh;
+        margin-left: 8vw;
+        width: 63vw;
+        height: 14vh;
+        background: linear-gradient(30deg, $buttonBgColor, $secondGradientColor);
+        border-radius: 2%;
+        position: relative;
+        .section_banner_text_wrap {
+            color: white;
+            .section_banner_heading {
+                padding-top: 2vh;
+                margin-left: 8vw;
+                font-size: 25px;
+                font-weight: 800;
+                position: relative;
+                z-index: 2;
+                &::after {
+                    @include underLine;
+                    height: 10px;
+                    width: 55px;
+                    top: 32px;
+                    left: 101px;
+                }
+            }
+            .section_banner_text {
+                padding-top: 2vh;
+                margin-left: 8vw;
+                font-size: 15px;
+                font-family: map-get($fontSettings, "textFont");
+            }
+        }
+        .section_banner_button {
+            left: 50vw;
+            top: 4vh;
+            @include btn;
+        }
+    }
+}
+footer {
+    background-color: $blockBgColor;
+    position: relative;
+    font-family: map-get($fontSettings, "textFont");
+    &::before {
+        content: "";
+        z-index: -1;
+        display:block;
+        height: 7vh;
+        width: 100%;
+        position: absolute;
+        top: -7vh;
+        background-color: $blockBgColor;
+    }
+    .footer-wrap{
+        padding: 3vh 10vw;
+        display: grid;
+        grid-template-columns: 22vw 22vw 22vw;
+        align-items: center;
+        grid-gap: 7vw; 
+        .landing-logo {
+            color: $blockTextColor;
+            p {
+                display:inline-block;
+                margin-left: 1vw;
+                font-size: 30px;
+                font-weight: 600;
+                text-align: center;
+                span{
+                    display: block;
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+        } 
+        .footer_text {
+            text-align: left;
+            vertical-align: center;
+            font-weight: normal;
+            color: $blockTextColor;
+        }
+        .footer-cr {
+            @extend .footer_text;
+            text-align: right;
+        }
+    }   
+}
