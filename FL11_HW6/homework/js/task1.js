@@ -1,0 +1,10 @@
+let ax = +prompt('enter x value of point \'A\'', '');
+let ay = +prompt('enter y value of point \'A\'', '');
+let bx = +prompt('enter x value of point \'B\'', '');
+let by = +prompt('enter y value of point \'B\'', '');
+let cx = +prompt('enter x value of point \'C\'', '');
+let cy = +prompt('enter y value of point \'C\'', '');
+const halfDevider = 2;
+let midx = (ax + bx) / halfDevider;
+let midy = (ay + by) / halfDevider;
+console.log(midx===cx && midy===cy);
