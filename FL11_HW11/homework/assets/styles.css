@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, serif;
+}
+
+#root {
+    align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 95%;
+}
+
+.showWarning {
+	text-align: center;
+	visibility: hidden;
+}
+.heading {
+    color: rgb(60, 180, 255);
+    font-size: 200%;
+	font-weight: bolder;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.addField {
+    align-items: center;
+	border-bottom: 2px solid #000;
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	margin: 15px 40px 10px 10px;
+	padding-bottom: 20px;
+}
+
+.inputField {
+	border: 1px solid #000;
+	display: flex;
+	flex-grow: 1;
+	font-size: 14px;
+	margin: 0 13px 0 15px;
+	padding: 4px 5px;
+}
+
+
+button {
+	align-items: center;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	display: flex;
+    padding: 0;
+}
+button:disabled {
+	cursor: not-allowed;
+}
+
+.btnAdd .material-icons {
+    font-size: 35px;
+}
+
+.todoList {
+	list-style-type: none;
+	margin: 10px 40px 10px 20px;
+}
+
+.listItem {
+	cursor: move;
+}
+
+.currentItem {
+	align-items: center;
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.currentItem p {
+	color: rgb(60, 180, 255);
+}
+
+.changeItem {
+	align-items: center;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.btnChange, .btnSave {
+    margin-left: 20px;
+    color: rgb(60, 180, 255);
+}
+
+.btnRemove {
+    margin-left: auto;
+    color: rgb(60, 180, 255);
+}
+
