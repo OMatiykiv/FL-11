@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, serif;
+}
+
+#root {
+    align-items: center;
+	display: flex;
+    justify-content: center;
+}
+
+.container {
+    flex-direction: column;
+	justify-content: center;
+	width: 95%;
+}
+
+#mainPage {
+	display: flex;
+}
+
+#addItem {
+    display: none;
+}
+
+#modifyItem {
+    display: none;
+}
+
+.heading {
+    font-size: 200%;
+	font-weight: bolder;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.addField {
+    align-items: center;
+	display: flex;
+    margin: 25px 0;
+    flex-direction: column;
+}
+
+.inputField {
+	display: flex;
+	flex-grow: 1;
+	font-size: 14px;
+	margin: 0 13px 0 15px;
+    padding: 4px 5px;
+    width: 22%;
+    border-radius: 5px;
+}
+
+.btnHolder {
+    align-items: center;
+	display: flex;
+    margin: 25px 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+	align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px 2px rgba(0,0,0,0.1);
+    padding: 2px 25px;
+    margin: 0px auto;
+	display: flex;
+    font-size: 20px;
+}
+
+.list {
+    margin: 0 auto;
+    flex-direction: column;
+    width: 22%;
+}
+
+#emptyList {
+    text-align: center;
+    font-size: 25px;
+}
+
+.taskItem {
+	display: flex;
+    flex-direction: row;
+    margin: 3px 0;
+}
+
+.taskItem span {
+    margin: auto;
+}
+
+.icons {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  
+    display: inline;
+}
+
+.todoList {
+	list-style-type: none;
+    width: 100%;
+}
+
+.currentItem {
+	align-items: center;
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.btnCancel {
+    margin-right: 20px;
+}
+
+.warning {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.warningMessage {
+    background-color: red;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 100%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 20px;
+    width: 16%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.1);
+}
+
+.warningHeading {
+    margin: 0.3em 0;
+    font-size: 120%;
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size:30px;
+}
+
+.closeBtn:hover {
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
