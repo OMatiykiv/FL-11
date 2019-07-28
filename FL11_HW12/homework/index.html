@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div id="root">
+    <div id="warning" class="warning">
+        <div class="warningMessage">
+            <span class="closeBtn">&times;</span>
+            <h6 class="warningHeading">Error</h6>
+            <p>You can't edit already done item</p>
+        </div>
+    </div>
+    
+    <div id="mainPage" class="container">
+      <h1 class="heading">Simple TODO application</h1>
+      <div class="addField">
+        <button class="btnAdd">Add new task</button>
+      </div>
+
+      <div class="list">
+        <p id='emptyList'>TODO is empty</p>   
+        <div class="todoList"></div>
+      </div>
+    </div>
+
+    <div id='addItem' class="container">
+      <h1 class="heading">Add task</h1>
+      <div class="addField">
+        <input class="inputField" name="addNewAction" type="text">
+        <div class="btnHolder">
+          <button class="btnCancel">Cancel</button>
+          <button class="btnSave">Save changes</button>
+        </div>
+      </div>
+    </div>
+
+    <div id='modifyItem' class="container">
+        <h1 class="heading">Modify item</h1>
+        <div class="addField">
+          <input class="inputField" name="changeAction" type="text">
+          <div class="btnHolder">
+            <button class="btnCancel">Cancel</button>
+            <button class="btnSave">Save changes</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+
+  <script src="./src/app.js"></script>
+</body>
+</html>
